@@ -1,0 +1,53 @@
+script(src='/javascripts/jquery-1.6.2.min.js', type='text/javascript')
+script(src='/socket.io/socket.io.js', type='text/javascript')
+script(src='/socket.io/socket.io-sessions.js?#{timestamp}', type='text/javascript')
+script(src='/javascripts/kakao.js', type='text/javascript')
+script(src='/javascripts/nativeBridge.js', type='text/javascript')
+h1= title
+p Welcome to #{title}
+input#message(type='text')
+button#chat
+  | Send Message
+input(type='radio',name='chatroom',checked,value='1',onclick='javascript:switchChatroom(1)')
+| chatroom 1
+input(type='radio',name='chatroom',checked,value='2',onclick='javascript:switchChatroom(2)')
+| chatroom 2
+input(type='radio',name='chatroom',checked,value='3',onclick='javascript:switchChatroom(3)')
+| chatroom 3
+br
+| picture
+input#picture(type='file')
+br
+| status message
+input#statusMessage(type='text')
+br
+| kakao id
+input#kakaoID(type='text')
+br
+| user name
+input#userName(type='text')
+br
+| phone number
+input#phoneNumber(type='text')
+br
+| verify code
+input#verifyCode(type='text')
+br
+button#register 
+  | Register
+button#verify
+  | Verify
+button#updateProfile
+  | Update Profile
+table
+  tr
+    td
+      #chatroom1
+        p 111111111111111111
+    td
+      #chatroom2
+        p 22222222222222222
+    td
+      #chatroom3
+        p 33333333333333333
+
